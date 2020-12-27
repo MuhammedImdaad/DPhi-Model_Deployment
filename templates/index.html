@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Application</title>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Welcome to DPhi Bank</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="isMale" placeholder="Are you a Male?" required="required" />
+      <input type="text" name="isMarried" placeholder="Are you Married?" required="required" />
+      <input type="text" name="Dependents" placeholder="No of Dependents" required="required" />
+      <br><br>
+      <input type="text" name="isGraduate" placeholder="Are you a Graduate?" required="required" />
+      <input type="text" name="isSelfEmployed" placeholder="Are you Self Employed?" required="required" />
+      <input type="text" name="ApplicantIncome" placeholder="Applicant Income" required="required" />
+      <br><br>
+      <input type="text" name="CopIncome" placeholder="CoApplicant Income" required="required" />
+      <input type="text" name="LoanAmount" placeholder="Loan Amount" required="required" />
+      <input type="text" name="Loan Amount Term" placeholder="LoanAmountTerm" required="required" />
+      <br><br>
+      <input type="text" name="Is your Credit History Clear?" placeholder="isCreditHistoryClear" required="required" />
+      <input type="text" name="levelofUrban" placeholder="Level of Urban(0<2)?" required="required" />
+      <br><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Submit Application</button>
+    </form>
+
+    <br>
+    <br>
+    {{ output }}
+
+  </div>
+
+
+</body>
+
+</html>
