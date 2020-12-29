@@ -24,8 +24,10 @@ def predict():
     '''
     labels = ['Accepted', 'Rejected']
 
-    features = [float(x) for x in request.form.values()]
-   
+    form_vals = request.form.values()
+    features = [float(x) for x in form_vals]
+    print(features)
+    
     values = [np.array(features)]
     
     model = load_model()
