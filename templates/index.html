@@ -10,21 +10,80 @@
   <div class="login">
     <h1>Welcome to DPhi Bank</h1>
     <form action="{{ url_for('predict')}}" method="post">
-      <input type="text" name="isMale" placeholder="Are you a Male?" required="required" />
-      <input type="text" name="isMarried" placeholder="Are you Married?" required="required" />
-      <input type="text" name="Dependents" placeholder="No of Dependents" required="required" />
+
+      <h2>Gender?</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-gender-male" name="isMale" value=1 checked/>
+        <label for="radio-gender-male">Male</label>
+        <input type="radio" id="radio-gender-female" name="isMale" value=0 />
+        <label for="radio-gender-female">Female</label>
+      </div>
+
+      <h2>Are you Married?</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-married-yes" name="isMarried" value=1  />
+        <label for="radio-married-yes">Yes</label>
+        <input type="radio" id="radio-married-no" name="isMarried" value=0 checked/>
+        <label for="radio-married-no">No</label>
+      </div>
+
+      <h2>No of Dependents?</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-dependents-0" name="Dependents" value=0 checked />
+        <label for="radio-dependents-0">0</label>
+        <input type="radio" id="radio-dependents-1" name="Dependents" value=1 />
+        <label for="radio-dependents-1">1</label>
+        <input type="radio" id="radio-dependents-2" name="Dependents" value=2 />
+        <label for="radio-dependents-2">2</label>
+        <input type="radio" id="radio-dependents-3" name="Dependents" value=3 />
+        <label for="radio-dependents-3">3+</label>
+      </div>
+      <!-- <br><br> -->
+
+      <h2>Are you a Graduate?</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-education-graduate" name="isGraduate" value=0 />
+        <label for="radio-education-graduate">Yes</label>
+        <input type="radio" id="radio-education-not_graduate" name="isGraduate" value=1 checked/>
+        <label for="radio-education-not_graduate">No</label>
+      </div>
+      
+      <h2>Are you Self Employed?</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-self_employed-yes" name="isSelfEmployed" value=1 />
+        <label for="radio-self_employed-yes">Yes</label>
+        <input type="radio" id="radio-self_employed-no" name="isSelfEmployed" value=0 checked/>
+        <label for="radio-self_employed-no">No</label>
+      </div>
+
       <br><br>
-      <input type="text" name="isGraduate" placeholder="Are you a Graduate?" required="required" />
-      <input type="text" name="isSelfEmployed" placeholder="Are you Self Employed?" required="required" />
       <input type="text" name="ApplicantIncome" placeholder="Applicant Income" required="required" />
+      <input type="text" name="CopIncome" placeholder="CoApplicant Income" required="required"  />
       <br><br>
-      <input type="text" name="CopIncome" placeholder="CoApplicant Income" required="required" />
-      <input type="text" name="LoanAmount" placeholder="Loan Amount" required="required" />
-      <input type="text" name="Loan Amount Term" placeholder="LoanAmountTerm" required="required" />
+      <input type="text" name="LoanAmount" placeholder="Loan Amount" required="required"  />
+      <input type="text" name="Loan Amount Term" placeholder="Loan Amount Term" required="required" />
       <br><br>
-      <input type="text" name="Is your Credit History Clear?" placeholder="isCreditHistoryClear" required="required" />
-      <input type="text" name="levelofUrban" placeholder="Level of Urban(0<2)?" required="required" />
+
+      <h2>Is your credit history clear?</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-credit_history-yes" name="isCreditHistoryClear" value=1 />
+        <label for="radio-credit_history-yes">Yes</label>
+        <input type="radio" id="radio-credit_history-no" name="isCreditHistoryClear" value=0 checked/>
+        <label for="radio-credit_history-no">No</label>
+      </div>
+
+      <h2>Your Property Area?</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-levelofUrban-rural" name="levelofUrban" value=0 checked/>
+        <label for="radio-levelofUrban-yes">Rural</label>
+        <input type="radio" id="radio-levelofUrban-semiurban" name="levelofUrban" value=1 />
+        <label for="radio-levelofUrban-no">Semiurban</label>
+        <input type="radio" id="radio-levelofUrban-urban" name="levelofUrban" value=2 />
+        <label for="radio-levelofUrban-no">Urban</label>
+      </div>
       <br><br>
+
+
       <button type="submit" class="btn btn-primary btn-block btn-large">Submit Application</button>
     </form>
 
